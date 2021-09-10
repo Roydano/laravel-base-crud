@@ -5,7 +5,8 @@
 @section('content')
     <div class="container">
         <h1 class="my-5">Inserisci un nuovo fumetto</h1>
-        <form>
+        <form action="{{ route('gestione_fumetto.store') }}" method="post">
+            @csrf
             <!-- sezione titolo -->
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>

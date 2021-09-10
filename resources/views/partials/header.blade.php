@@ -14,7 +14,7 @@
                         <a class="nav-link" href="{{ route('gestione_fumetto.index') }}">Gestione fumetto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contatti</a>
+                        <a class="nav-link" href="{{ route('gestione_fumetto.create')}}">Crea fumetto</a>
                     </li>
                 </ul>
             </div>

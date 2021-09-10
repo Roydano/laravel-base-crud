@@ -67,7 +67,8 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comicEdit = Comic::find($id);
+        return view('comics.edit', compact('comicEdit'));
     }
 
     /**
@@ -79,7 +80,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // dd($request->all());
+
+        $data = $request->all();
+        $comicEdit = Comic::find($id);
+        $comicEdit->update($data);
+        // $data = $request->all();
+
+        // $comicEdit->update($data);
+
+        return redirect()->route('gestione_fumetto.index');
     }
 
     /**

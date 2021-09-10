@@ -26,7 +26,7 @@
                 <td>{{$comic->type}}</td>
                 <td>
                     <a href="{{ route('gestione_fumetto.show', ['gestione_fumetto' => $comic->id ]) }}" class="btn btn-primary">Show</a>
-                    <a href="" class="btn btn-warning">Edit</a>
+                    <a href="{{ route('gestione_fumetto.edit', ['gestione_fumetto' => $comic->id ]) }}" class="btn btn-warning">Edit</a>
                     <a href="" class="btn btn-danger">Delete</a>
                 </td>
             </tr>

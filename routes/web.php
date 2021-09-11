@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/dettagli/{id}', 'HomeController@show')->name('detail');
+
 Route::resource('/gestione_fumetto', 'ComicController');

@@ -12,7 +12,7 @@
 
         <div class="row">
             <div class="col-md-6 text-center">
-                <img src="{{ $comics->img }}" alt="{{$comics->title }}">
+                <img src="{{ $comics->img }}" alt="{{$comics->title }}" class="max-w-100">
             </div>
             <div class="col-md-6">
                 <p>{!! $comics->description !!}</p>

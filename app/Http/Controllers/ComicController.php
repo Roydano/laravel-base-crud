@@ -89,7 +89,7 @@ class ComicController extends Controller
 
         // $comicEdit->update($data);
 
-        return redirect()->route('gestione_fumetto.index');
+        return redirect()->route('gestione_fumetto.index')->with('modifica', 'Hai modificato il fumetto con id ' . $comicEdit->id);
     }
 
     /**
@@ -99,7 +99,14 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-        //
+    {   
+        
+        $comic = Comic::find($id);
+        $comic->delete();
+
+        return redirect()->route('gestione_fumetto.index')->with('cancella', 'Hai eliminato il fumetto con id ' . $comic->id);
+        
+
+       
     }
 }

@@ -16,6 +16,7 @@
                     <img src="{{$comic['img']}}" class="card-img-top" alt="{{$comic['title']}}">
                     <div class="card-body">
                         <h5 class="card-title">{{$comic['title']}}</h5>
+                        <p class="row-max">{{$comic['description']}}</p>
                         <a href="{{ route('detail', ['id' => $comic->id]) }}" class="btn btn-primary mt-5">Vai ai dettagli</a>
                     </div>
                 </div>
